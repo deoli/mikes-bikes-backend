@@ -1,0 +1,61 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+bicycle:
+  parent: nil
+  name: Bicycle
+  is_optional: false
+
+frame:
+  parent: bicycle
+  name: Frame
+  is_optional: false
+
+finish:
+  parent: frame
+  name: Frame finish
+  is_optional: false
+
+wheel:
+  parent: frame
+  name: Wheels
+  is_optional: false
+
+rim:
+  parent: wheel
+  name: Rim colour
+  is_optional: false
+
+chain:
+  parent: frame
+  name: Chain
+  is_optional: false
+
+brake:
+  parent: frame
+  name: Brakes
+  is_optional: true
+
+ski:
+  parent: nil
+  name: Skis
+  is_optional: false
+
+core:
+  parent: ski
+  name: Ski core material
+  is_optional: false
+
+print:
+  parent: core
+  name: Ski print
+  is_optional: false
+
+binding:
+  parent: core
+  name: Bindings
+  is_optional: false
+
+colour:
+  parent: binding
+  name: Binding colour
+  is_optional: false
