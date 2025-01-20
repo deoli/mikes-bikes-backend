@@ -1,0 +1,4 @@
+rails generate scaffold blueprint parent:references name:string is_optional:boolean
+rails generate scaffold product parent:references blueprint:references name:string
+rails generate scaffold part name:string code:string stock_count:integer
+rails generate scaffold product_part product:references part:references
