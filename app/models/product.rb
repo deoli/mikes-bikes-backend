@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :blueprint
+  has_and_belongs_to_many :parts
 
   # Parent association
   belongs_to :parent,
