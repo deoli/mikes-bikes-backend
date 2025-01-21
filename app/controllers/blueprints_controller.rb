@@ -38,6 +38,15 @@ class BlueprintsController < ApplicationController
     @blueprint.destroy!
   end
 
+  # OPTIONS /blueprints
+  def options
+    render json: [
+      { key: "name", type: "string" },
+      { key: "parent_id", type: "ref#blueprints" },
+      { key: "is_optional", type: "boolean" }
+    ]
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blueprint

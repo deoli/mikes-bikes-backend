@@ -38,6 +38,15 @@ class PartsController < ApplicationController
     @part.destroy!
   end
 
+  # OPTIONS /parts
+  def options
+    render json: [
+      { key: "name", type: "string" },
+      { key: "code", type: "string" },
+      { key: "stock_count", type: "integer" }
+    ]
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_part

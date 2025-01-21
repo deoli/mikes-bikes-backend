@@ -38,6 +38,15 @@ class ProductsController < ApplicationController
     @product.destroy!
   end
 
+  # OPTIONS /products
+  def options
+    render json: [
+      { key: "name", type: "string" },
+      { key: "parent_id", type: "ref#products" },
+      { key: "blueprint_id", type: "ref#blueprints" }
+    ]
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product

@@ -1,7 +1,20 @@
 Rails.application.routes.draw do
-  resources :parts
-  resources :products
-  resources :blueprints
+  resources :parts do
+    collection do
+      match "/", to: "parts#options", via: :options
+    end
+  end
+  resources :products do
+    collection do
+      match "/", to: "products#options", via: :options
+    end
+  end
+  resources :blueprints do
+    collection do
+      match "/", to: "blueprints#options", via: :options
+    end
+  end
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
