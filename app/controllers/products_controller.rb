@@ -42,8 +42,7 @@ class ProductsController < ApplicationController
   def options
     render json: [
       { key: "name", type: "string" },
-      { key: "parent_id", type: "ref#products" },
-      { key: "blueprint_id", type: "ref#blueprints" }
+      { key: "stock_count", type: "integer" }
     ]
   end
 
@@ -55,6 +54,6 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.expect(product: [ :parent_id, :blueprint_id, :name ])
+      params.expect(product: [ :name, :stock_count ])
     end
 end

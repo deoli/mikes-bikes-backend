@@ -1,6 +1,6 @@
 require "test_helper"
 
-class PartTest < ActiveSupport::TestCase
+class BlueprintProductTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

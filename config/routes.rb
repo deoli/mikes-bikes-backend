@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :parts do
+  resources :blueprint_products do
     collection do
-      match "/", to: "parts#options", via: :options
+      match "/", to: "blueprint_products#options", via: :options
     end
   end
   resources :products do
