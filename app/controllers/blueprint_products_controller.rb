@@ -55,6 +55,6 @@ class BlueprintProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blueprint_product_params
-      params.expect(blueprint_product: [ :parent_id, :product_id, :blueprint_id ])
+      params.expect(blueprint_product: [ :parent_id, :product_id, :blueprint_id, :stock_count ])
     end
 end
