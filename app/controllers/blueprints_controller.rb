@@ -43,7 +43,8 @@ class BlueprintsController < ApplicationController
     render json: [
       { key: "name", type: "string" },
       { key: "parent_id", type: "ref#blueprints" },
-      { key: "is_optional", type: "boolean" }
+      { key: "is_optional", type: "boolean" },
+      { key: "is_attribute", type: "boolean" }
     ]
   end
 
@@ -55,6 +56,6 @@ class BlueprintsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blueprint_params
-      params.expect(blueprint: [ :parent_id, :name, :is_optional ])
+      params.expect(blueprint: [ :parent_id, :name, :is_optional, :is_attribute ])
     end
 end

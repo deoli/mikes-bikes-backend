@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_27_005610) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_27_144134) do
   create_table "blueprint_products", force: :cascade do |t|
     t.integer "parent_id"
     t.integer "product_id", null: false
@@ -29,6 +29,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_27_005610) do
     t.boolean "is_optional"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_attribute"
     t.index ["parent_id"], name: "index_blueprints_on_parent_id"
   end
 
