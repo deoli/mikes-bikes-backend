@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_26_004714) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_27_005610) do
   create_table "blueprint_products", force: :cascade do |t|
     t.integer "parent_id"
     t.integer "product_id", null: false
     t.integer "blueprint_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "stock_count"
     t.index ["blueprint_id"], name: "index_blueprint_products_on_blueprint_id"
     t.index ["parent_id"], name: "index_blueprint_products_on_parent_id"
     t.index ["product_id"], name: "index_blueprint_products_on_product_id"
@@ -35,7 +36,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_26_004714) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "stock_count"
   end
 
   add_foreign_key "blueprint_products", "blueprints"
