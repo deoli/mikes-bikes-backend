@@ -43,7 +43,8 @@ class BlueprintProductsController < ApplicationController
     render json: [
       { key: "product_id", type: "ref#products" },
       { key: "parent_id", type: "ref#products" },
-      { key: "blueprint_id", type: "ref#blueprints" }
+      { key: "blueprint_id", type: "ref#blueprints" },
+      { key: "stock_count", type: "integer" }
     ]
   end
 

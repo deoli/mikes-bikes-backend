@@ -41,8 +41,7 @@ class ProductsController < ApplicationController
   # OPTIONS /products
   def options
     render json: [
-      { key: "name", type: "string" },
-      { key: "stock_count", type: "integer" }
+      { key: "name", type: "string" }
     ]
   end
 
