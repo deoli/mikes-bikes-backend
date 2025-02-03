@@ -1,4 +1,4 @@
-name: "factorial_test"
+name: "mikes_bikes"
 
 services:
   rails-app:

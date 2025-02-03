@@ -2,8 +2,8 @@
 # check=error=true
 
 # This Dockerfile is designed for production, not development. Use with Kamal or build'n'run by hand:
-# docker build -t factorial_test .
-# docker run -d -p 80:80 -e RAILS_MASTER_KEY=<value from config/master.key> --name factorial_test factorial_test
+# docker build -t mikes_bikes_backend .
+# docker run -d -p 80:80 -e RAILS_MASTER_KEY=<value from config/master.key> --name mikes_bikes_backend mikes_bikes_backend
 
 # For a containerized dev environment, see Dev Containers: https://guides.rubyonrails.org/getting_started_with_devcontainer.html
 
